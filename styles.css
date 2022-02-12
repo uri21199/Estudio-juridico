@@ -1,17 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.wsp-icon {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2000;
+    border-radius: 80%;
+}
+
 .navbar {
-    background-color: #eee;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.navbar button span {
+    background-color: transparent;
+}
+
+.bi.bi-list {
+    color: #fff;
 }
 
 .navbar-brand {
-    color: #000;
+    color: #fff;
 }
 
 .navbar-nav a {
-    color: #000;
+    color: #fff;
 }
 
 .navbar-nav a:hover {
-    color: #000;
+    color: #5C1BBE;
 }
 
 .banner {
@@ -61,17 +81,21 @@
     color: #333;
 }
 
-.nosotros h4 {
+#nosotros {
+    margin-top: 15px;
+}
+
+h3 {
     margin-top: 10px;
     text-align: center;
 }
 
-.nosotros h4::after {
+h3::after {
     content: "";
     display: block;
     width: 100px;
-    height: 2px;
-    background-color: #333;
+    height: 4px;
+    background-color: #5C1BBE;
     margin: 5px auto;
 }
 
@@ -99,77 +123,82 @@
 
 .personal-nombre {
     margin-top: 5px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
 
-.juridico {
-    background-color: #eee;
-    margin-top: 20px;
-    padding: 10px;
+.personal-info {
+    font-size: .85em;
 }
 
-.juridico h2 {
-    text-align: center;
+#juridico {
+    margin-top: 40px;
+    padding: 15px 0;
+    background-color: #f1f2f2;
 }
 
-.juridico h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background-color: #333;
-    margin: 5px auto;
-}
-
-.cont-padre {
-    margin-top: 30px;
+.servicios-cont {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-.cont {
-    height: 300px;
-    width: 20%;
-    margin: 0 15px;
+.servicios {
     border: 2px solid #000;
+    margin: 10px 20px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
     overflow: hidden;
 }
 
-.cont:hover .box-datos {
-    transform: translateY(-130px);
-} 
-
-.cont img {
-    height: 200px;
+.servicios img {
     width: 100%;
-    object-fit: cover;
-    border-radius: 3px;
+    height: 70%;
 }
 
-.box-datos {
-    height: 235px;
-    width: 100%;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: .4s;
+#contable {
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #fff;
 }
 
-.box-datos h1 {
-    font-size: 1em;
-    font-family: sans-serif;
+.servicios-info {
+    background-color: #fff;
+    height: 30%;
+    transition: all .3s ease-in-out;
+    padding: 10px 0;
+}
+
+.servicios-info ul {
+    columns: 2;
+    margin-top: 25px;
+    font-size: .75em;
+}
+
+.servicios:hover .servicios-info {
+    height: 100%;
+    transform: translateY(-70%);
+}
+
+#contacto {
+    background-color: #f1f2f2;
+    padding: 15px 0;
+}
+
+.contacto iframe {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.copyright {
+    border-top: 2px solid #eee;
     text-align: center;
-}
-
-.box-datos p {
-    text-align: justify;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .9em;
-    width: 80%;
+    font-size: .75em;
+    padding: 5px 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -177,33 +206,6 @@
         display: flex;
         justify-content: end;
     }
-
-    .box-datos h5 {
-        margin: 50px 0;
-    }
-
-    .cont:hover .box-datos h5 {
-        margin: 10px 0;
-    } 
-}
-
-@media screen and (min-width: 768px) and (max-width: 1015px) {
-    .box-datos h5 {
-        margin: 50px 0 0 0;
-    }
-
-    .cont {
-        width: 280px;
-        margin: 10px 5px;
-    }
-
-    .cont:hover .box-datos h5 {
-        margin: 10px 0;
-    } 
-
-    .cont:hover .box-datos {
-        transform: translateY(-100px);
-    } 
 }
 
 @media screen and (max-width: 768px) {
@@ -213,7 +215,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .personal {
         margin-top: 15px;
     }
@@ -223,21 +225,14 @@
         margin: 0 10px;
     }
 
-    .cont {
-        width: 280px;
-        margin: 10px 5px;
+    .contacto {
+        display: flex;
+        flex-direction: column;
     }
-}
 
-@media screen and (min-width: 616px) and (max-width: 1000px) {
-    .box-datos h5 {
-        margin-bottom: 50px;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 615px) {
-    .cont {
-        width: 450px;
+    #contacto iframe {
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
@@ -245,22 +240,4 @@
     .personal {
         width: 280px;
     }
-
-    .cont {
-        width: 100%;
-        height: 300px;
-        margin: 10px 0;
-    }
-
-    .cont img {
-        height: 150px;
-    }
-
-    .box-datos {
-        height: 150px;
-    }
-
-    .cont:hover .box-datos {
-        transform: translateY(0);
-    } 
 }

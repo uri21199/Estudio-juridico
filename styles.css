@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+.navbar {
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar span {
+    color: #000;
+}
+
+.navbar button {
+    color: #000 !important;
+}
+
+.navbar-nav li a{
+    color: #000;
+    font-weight: 600;
+}
+
+.navbar-nav li a:hover {
+    color: #968154;
+    background-color: #fff;
+}
+
+.navbar-nav li a:focus {
+    color: #968154;
+}
+
 .wsp-icon {
     height: 50px;
     width: 50px;
@@ -8,71 +36,6 @@
     bottom: 30px;
     z-index: 2000;
     border-radius: 80%;
-}
-
-header {
-    position: fixed;
-    top: 0; right: 0; left: 0;
-    background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    padding: 0px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
-
-header ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-    position: relative;
-}
-
-
-header ul li a {
-    font-size: 20px;
-    margin: 0 10px;
-    color: #333;
-    display: block;
-    text-decoration: none;
-    padding: 10px 5px;
-}
-
-header ul li a:hover {
-    background-color: #968154;
-    color: #fff;
-}
-
-header ul li ul {
-    position: absolute;
-    left: 0;
-    width: 300px;
-    background-color: #fff;
-    display: none;
-    padding: 0;
-}
-
-header ul li ul li {
-    width: 100%;
-    border-top: 1px solid rgba(0,0,0,.1);
-}
-
-header ul li:focus-within > ul,
-header ul li:hover > ul {
-    display: initial;
-}
-
-#menu-bar {
-    display: none;
-}
-
-header label {
-    font-size: 10px;
-    color: #333;
-    cursor: pointer;
-    display: none;
 }
 
 .banner {
@@ -88,7 +51,7 @@ header label {
 }
 
 .banner-content {
-    margin-top: 20px;
+    margin-top: 60px;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -126,12 +89,12 @@ header label {
     margin-top: 15px;
 }
 
-h3 {
+.asesoramiento, h3 {
     margin-top: 10px;
     text-align: center;
 }
 
-h3::after {
+.asesoramiento::after, h3::after {
     content: "";
     display: block;
     width: 100px;
@@ -187,6 +150,14 @@ h3::after {
 
 #impositivo, #laboral, #contable, #juridico {
     margin: 70px 0;
+}
+
+.col-lg-9.col-sm-12 h4 {
+    margin-bottom: 20px;
+}
+
+ol li {
+    margin: 10px 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -249,6 +220,9 @@ h3::after {
 }
 
 @media screen and (max-width: 768px) {
+    .col-lg-9.col-sm-12 {
+        margin-top: 20px;
+    }
     .dropdown-toggle {
         margin-top: 0;
         padding: 0;
@@ -259,6 +233,10 @@ h3::after {
         border-top: 1px solid #968154;
         border-bottom: 1px solid #968154;
         border-radius: 0;
+    }
+
+    .dropdown-item {
+        background-color: #fff;
     }
 
     .personal-cont {

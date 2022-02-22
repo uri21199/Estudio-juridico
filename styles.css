@@ -33,6 +33,10 @@
     color: #968154;
 }
 
+div#navbarNavDropdown {
+    justify-content: end;
+}
+
 .wsp-icon {
     height: 50px;
     width: 50px;
@@ -95,7 +99,7 @@
 }
 
 .asesoramiento, h3 {
-    color: #968154;
+    color: #000;
     margin-top: 10px;
     text-align: center;
 }
@@ -105,7 +109,7 @@
     display: block;
     width: 100px;
     height: 4px;
-    background-color: #E95122;
+    background-color: #968154;
     margin: 5px auto;
 }
 
